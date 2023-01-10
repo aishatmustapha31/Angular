@@ -1,0 +1,36 @@
+
+
+
+<ul>
+    <li>
+        <a href="/dashboard">Dashboard</a>
+    </li>
+    <li>
+        <a href="/box">Box</a>
+    </li>
+    <li>
+        <a href="/tool">Tool</a>
+    </li>
+</ul>
+
+
+
+<h1>This is {{title}}</h1>
+<div>
+  <h2>My favorite books</h2>
+  <ul>
+    
+
+    <app-list-fav 
+      *ngFor="let book of favBooks"
+      [bookObject]="book"
+    >
+    </app-list-fav>
+  </ul>
+  
+  
+</div>
+
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,23 @@
+
+<div class="content">
+    <div class="vote-box"  *ngFor="let c of getAllCandidates()">
+
+        <div class="name">
+            {{c.Name}}
+        </div>
+
+        <div class="body">
+            {{c.Score}}
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+               <button class="btn btn-success" (click)="onVote(c.Id)">Vote</button> 
+            </div>
+           
+        </div>
+
+
+
+    </div>
+</div>

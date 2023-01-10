@@ -1,0 +1,44 @@
+  
+
+
+  <h2>{{name}}</h2>
+  <h2>{{name | lowercase}}</h2>
+  <h2>{{name | uppercase}}</h2>
+  <h2>{{message | titlecase}}</h2>
+  <h2>{{name | slice:8:12}}</h2>
+  <h2>{{person | json}}</h2>
+
+
+  <!---number pipe-->
+  <h2>{{5.678 | number: '1.2-3'}} </h2>
+  <!--the 1 means minimum 1 digit in the intiger place, followed by a dot, followed by the minimum number of decimal digits which is 2, then a hifin, then the maximum number of decimal digits-->
+
+  <h2>{{5.678 | number: '3.4-5'}}</h2>
+  <!--minimum digits 3(it is going to append 2 zeros to give 3 digits, minimum 4 digits in the decimal place(a zero would be appended towards the right to make it 4 digits))-->
+
+  <h2>{{5.678 | number: '3.1-2'}}</h2>
+  <!--minimum of 3 digits in the integer place it becomes 005, maximum of 2 digits in the decimal place, 678 gets rounded off making it 005.68-->
+
+
+
+  <!---percent pipe-->
+  <h2>{{0.25 | percent}}</h2>
+
+
+  <!---currency pipe-->
+  <h2>{{0.25 | currency}}</h2>
+  <h2>{{0.25 | currency: 'GBP'}}</h2>
+  <h2>{{0.25 | currency: 'GBP': 'code'}}</h2>
+
+  <!--Date Pipe-->
+
+   <h2>{{date }}</h2>
+   <h2>{{date | date:'short' }}</h2>
+   <h2>{{date| date: 'shortDate' }}</h2>
+   <h2>{{date | date:'shortTime' }}</h2>
+   <!--similarly there is also meduim, meduimDate and meduimTime.. there is also long, longDate and longTime-->
+
+
+
+
+ 

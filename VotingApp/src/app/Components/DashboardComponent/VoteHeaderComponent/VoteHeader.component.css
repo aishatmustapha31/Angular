@@ -1,0 +1,28 @@
+
+.container{
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: cornflowerblue;
+}
+.box{
+    width:150px;
+    height: 150px;
+    border:solid black 2px;
+    margin-left: 10px;
+    float: left;
+    background-color: aliceblue;
+}
+
+.box .header{
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.box .body{
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}

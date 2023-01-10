@@ -1,0 +1,64 @@
+
+<mat-dialog-content class="mat-typography">
+  <h3>Application Form</h3>
+  <form [formGroup]="employeeForm" >
+    <div class="form-group row">
+        <label for="firstName" class="col-3">FirstName</label>
+        <input id="firstName" type="text" class="col-9" formControlName="firstName" required>
+        <div  *ngIf="employeeForm.controls['firstName'].dirty && employeeForm.controls['firstName'].invalid">
+            <div class="alert alert-danger" *ngIf="this.employeeForm.controls['firstName'].errors!['required']">
+                First Name must not be empty!
+            </div>
+            <div class="alert alert-info" *ngIf="this.employeeForm.controls['firstName'].errors!['minlength']">
+                First Name can not be less than three characters.
+            </div>
+
+            <div class="alert alert-warning" *ngIf="this.employeeForm.controls['firstName'].errors!['maxlength']">
+                First Name is too long.
+            </div>
+        </div>
+    </div>
+    <div class="form-group row mt-2">
+        <label for="lastName" class="col-3">LastName</label>
+        <input id="lastName" type="text" class="col-9" formControlName="lastName" required>
+        <div *ngIf="employeeForm.controls['lastName'].dirty && employeeForm.controls['lastName'].invalid">
+            <div class="alert alert-danger" *ngIf="this.employeeForm.controls['lastName'].errors!['required']">
+                Last Name must not be empty!
+            </div>
+            <div class="alert alert-info" *ngIf="this.employeeForm.controls['lastName'].errors!['minlength']">
+                Last Name can not be less than three characters.
+            </div>
+            <div class="alert alert-warning" *ngIf="this.employeeForm.controls['lastName'].errors!['maxlength']">
+                Last Name is too long.
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row mt-2">
+        <label for="phone" class="col-3">Phone Number</label>
+        <input id="phone" type="text" class="col-9" formControlName="phone" required>
+        <div *ngIf="employeeForm.controls['phone'].dirty && employeeForm.controls['phone'].invalid">
+            <div class="alert alert-danger" *ngIf="this.employeeForm.controls['phone'].errors!['required']">
+                Phone Number must not be empty!
+            </div>
+            <div class="alert alert-info" *ngIf="this.employeeForm.controls['lastName'].errors!['minlength']">
+                Phone Number can not be less than Eleven Digits.
+            </div>
+            <div class="alert alert-warning" *ngIf="this.employeeForm.controls['lastName'].errors!['maxlength']">
+                Phone Number Must Not Be More Than Eleven Digits.
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row mt-2">
+        <label for="email" class="col-3">Email Address</label>
+        <input id="email" type="email" class="col-9" formControlName="email" required>
+    </div>
+
+
+</form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close class="btn btn-danger" >Cancel</button>
+  <button class="btn btn-secondary"   [disabled]="employeeForm.invalid" mat-button [mat-dialog-close]="true" cdkFocusInitial>Update Form</button>
+</mat-dialog-actions>

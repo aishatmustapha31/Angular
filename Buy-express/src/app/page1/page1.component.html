@@ -1,0 +1,45 @@
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+        </tr>
+        
+    </thead>
+    <tbody> 
+        <tr>
+            <td>title</td>
+            <td>{{mainProduct.title}}</td>
+        </tr>
+        <tr>
+            <td>Category</td>
+            <td>{{mainProduct.category}}</td>
+        </tr>
+        <tr>
+            <td>image</td>
+            <td>
+                <img src="{{mainProduct.image}}" alt="" width="150px">
+            </td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>
+                {{mainProduct.price| currency}}
+            </td>
+        </tr>
+        <tr>
+            <td>Count</td>
+            <td>
+                {{mainProduct.rating.count}}
+            </td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>
+                {{mainProduct.description}}
+            </td>
+        </tr>
+        
+    </tbody>
+</table>

@@ -1,0 +1,18 @@
+
+
+.content{
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px red;
+    background-color: rgb(65, 208, 248);
+}
+
+.vote-box{
+    width:200px;
+    min-height: 100px;
+    border:solid 1px green;
+    float: left;
+    margin-left: 10px;
+}

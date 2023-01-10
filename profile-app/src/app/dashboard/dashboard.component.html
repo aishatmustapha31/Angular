@@ -1,0 +1,106 @@
+
+<h2>Dashboard Component</h2>
+
+
+  <!-- Variable Interpolation -->
+<h4>AppName: {{appName}}</h4>
+<h4> Today's Date: {{toDay | date}}</h4>
+<h4> Is Completed Task : {{isCompleted}}</h4>
+<h4> 100 + 120 = {{ 100 + 120 }}</h4>
+
+
+<!-- Property Binding -->
+<br>
+<label>Number of Months:</label>
+<input value="10" class="form-control">
+<input type="text" [value]="numberOfMonths">
+<br><br>
+
+<button class="btn btn-danger" [disabled]="isDiabled">Compute </button>
+
+<!--  Event Binding  -->
+
+<br><br>
+
+<button class="btn btn-success"  (click)="onComputeCliked()"> Initialize Payroll </button> <br>
+
+<div class="alert alert-danger">
+    {{initStatus}}
+</div>
+
+
+<!-- Two-Way Binding -->
+
+ <h2 class="alert alert-info"> {{nameWithCode}} {{fullName}}</h2>
+
+ <input type="text" [(ngModel)]="fullName" (change)="onTextChange()">
+
+<br> <br>
+
+<!----- class binding ------>
+
+<h2 class="text-success">Welcome Message</h2>
+<h2 [class]="successClass">Welcome Message</h2>
+<br> <br>
+
+<!-- single class conditioning -->
+
+<h2 [class.text-danger]="hasError">New Class</h2>
+
+<!-- multiple class conditioning -->
+
+<h2 [ngClass]="messageClasses">Multiple Class Conditioning</h2>
+
+<!----- style binding ------>
+
+<h2 [style.color]="'orange'" >Style Binding</h2>
+
+<h2 [style.color]= "hasError ? 'red' : 'green'" >Style Binding</h2>
+
+<h2 [style.color]="highlightColor"> Highlight Color</h2>
+
+<h2 [ngStyle]="titleStyle">Multiple Styling</h2>
+
+<!----- ngIf ------>
+<br> <br> <br>
+
+
+
+<h2 *ngIf="displayName; else elseBlock">Angular Training</h2>
+
+
+<br> <br>
+
+<ng-template #elseBlock>
+  
+  <h2>Name is Hidden</h2>
+</ng-template>
+
+
+<!----- ngSwitch ------>
+
+<!---<h2 [ngSwitch]="color">
+   <h2 [*ngSwitchCase]="'red'">You picked red color</h2>
+   <div [*ngSwitchCase]="'blue'">You picked blue color</div>
+   <div [ngSwitchCase]="'green'">You picked green color</div>
+</h2> --->
+
+<!----- ngFor ------>
+
+<div *ngFor="let color of colors; index as i">
+  <h2>{{i}} {{color}}</h2>
+</div>
+
+<!--<div *ngFor="let color of colors; first as f || last as l || even as e || odd as o  ">
+  <h2>{{f}} {{color}}</h2>
+</div>-->
+
+
+ 
+
+
+
+
+
+
+
